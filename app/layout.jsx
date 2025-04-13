@@ -15,7 +15,7 @@ const mainLayout = ({ children }) => {
   return (
     <html>
       <body>
-        <main>{children}</main>
+        <main className="font-display">{children}</main>
       </body>
     </html>
   );
