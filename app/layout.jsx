@@ -1,5 +1,4 @@
 import "@/assets/styles/globals.css";
-
 // favicon is alo loaded in automatically, just by having a file called "favicon.ico" placed in the app folder
 
 // this metadata is automatically loaded in just by exporting it here in the layout
