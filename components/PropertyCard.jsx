@@ -38,8 +38,8 @@ const PropertyCard = ({ property }) => {
         </div>
 
         <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
-          {Object.keys(property.rates).map((key) => (
-            <p>
+          {Object.keys(property.rates).map((key, i) => (
+            <p key={i}>
               <FaMoneyBill className="md:hidden lg:inline" /> {key}
             </p>
           ))}
