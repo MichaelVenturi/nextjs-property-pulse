@@ -1,6 +1,6 @@
 import "@/assets/styles/globals.css";
+import Navbar from "@/components/Navbar";
 // favicon is alo loaded in automatically, just by having a file called "favicon.ico" placed in the app folder
-
 // this metadata is automatically loaded in just by exporting it here in the layout
 export const metadata = {
   title: "Property Pulse",
@@ -14,6 +14,7 @@ const mainLayout = ({ children }) => {
   return (
     <html>
       <body>
+        <Navbar />
         <main className="font-display">{children}</main>
       </body>
     </html>
