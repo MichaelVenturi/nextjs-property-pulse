@@ -1,5 +1,6 @@
 import "@/assets/styles/globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 // favicon is alo loaded in automatically, just by having a file called "favicon.ico" placed in the app folder
 // this metadata is automatically loaded in just by exporting it here in the layout
 export const metadata = {
@@ -16,6 +17,7 @@ const mainLayout = ({ children }) => {
       <body>
         <Navbar />
         <main className="font-display">{children}</main>
+        <Footer />
       </body>
     </html>
   );

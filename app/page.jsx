@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Hero from "@/components/Hero";
+import InfoBoxes from "@/components/InfoBoxes";
+
 // a next link uses href property, not "to" like react router.  You can do this two ways
 // Link href="/properties?query=param" as plain text, allowing query params as well, or
 // href={{
@@ -9,14 +11,8 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <div>
-      <h1 className="text-3xl">Welcome</h1>
-      <Link
-        href={{
-          pathname: "properties",
-          query: { name: "test" },
-        }}>
-        go to properties
-      </Link>
+      <Hero />
+      <InfoBoxes />
     </div>
   );
 };
