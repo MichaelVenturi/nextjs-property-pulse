@@ -42,6 +42,8 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --grid-template-columns-70\/30: 70% 28%;
 }
 
 /*
