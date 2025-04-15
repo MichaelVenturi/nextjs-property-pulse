@@ -19,7 +19,7 @@ export const authOptions = {
     }),
   ],
   callbacks: {
-    // Invoked on successful sign in
+    // Invoked on successful sign in, when running the signIn function from nextjs
     async signIn({ profile }) {
       // 1. connect to the database
       await connectDB();
@@ -38,7 +38,7 @@ export const authOptions = {
       // 4. return true to allow sign in
       return true;
     },
-    // session callback function that modifies the session object
+    // session callback function that modifies the session object (getSession triggers this I think)
     async session({ session }) {
       // 1. get user from database
       const user = await User.findOne({ email: session.user.email });

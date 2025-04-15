@@ -8,10 +8,12 @@ import profileDefault from "@/assets/images/profile.png";
 import { FaGoogle } from "react-icons/fa";
 
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+// when we call this signIn function, it triggers the signIn callback we wrote in authOptions
 
 const Navbar = () => {
   const { data: session } = useSession();
-  console.log(session);
+  const profileImage = session?.user?.image;
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [providers, setProviders] = useState(null);
@@ -130,7 +132,7 @@ const Navbar = () => {
                     onClick={() => setIsProfileMenuOpen((prevState) => !prevState)}>
                     <span className="absolute -inset-1.5"></span>
                     <span className="sr-only">Open user menu</span>
-                    <Image className="h-8 w-8 rounded-full" src={profileDefault} alt="" />
+                    <Image className="h-8 w-8 rounded-full" src={profileImage || profileDefault} alt="" width={40} height={40} />
                   </button>
                 </div>
 
@@ -154,7 +156,15 @@ const Navbar = () => {
                       id="user-menu-item-2">
                       Saved Properties
                     </Link>
-                    <button className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                    <button
+                      className="block px-4 py-2 text-sm text-gray-700"
+                      role="menuitem"
+                      tabIndex="-1"
+                      id="user-menu-item-2"
+                      onClick={() => {
+                        setIsProfileMenuOpen(false);
+                        signOut();
+                      }}>
                       Sign Out
                     </button>
                   </div>
