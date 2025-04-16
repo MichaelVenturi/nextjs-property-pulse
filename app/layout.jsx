@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // favicon is alo loaded in automatically, just by having a file called "favicon.ico" placed in the app folder
 // this metadata is automatically loaded in just by exporting it here in the layout
 export const metadata = {
@@ -21,6 +23,7 @@ const mainLayout = ({ children }) => {
           <Navbar />
           <main className="font-display">{children}</main>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>
