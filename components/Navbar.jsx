@@ -27,7 +27,23 @@ const Navbar = () => {
       setProviders(res);
     };
     setAuthProviders();
+
+    window.addEventListener("resize", () => {
+      setIsMobileMenuOpen(false);
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setIsMobileMenuOpen(false);
+      });
+    };
   }, []);
+
+  // close menus when navigating
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsProfileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
