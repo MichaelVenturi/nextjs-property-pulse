@@ -10,7 +10,7 @@ const PropertyImages = ({ images }) => {
           <div className="grid grid-cols-2 gap-4">
             {images.map((image, i) => (
               // if there is an odd amount of images, then make the last image span its entire row
-              <div key={i} className={`col-span-${images.length % 2 === 1 && i === images.length - 1 ? "2" : "1"}`}>
+              <div key={i} className={`${images.length % 2 === 1 && i === images.length - 1 ? "col-span-2" : "col-span-1"}`}>
                 <Image src={image} alt="" className="object-cover h-[400px] w-full rounded-xl" width={1800} height={400} priority={true} />
               </div>
             ))}
