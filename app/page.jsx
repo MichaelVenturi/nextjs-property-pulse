@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import InfoBoxes from "@/components/InfoBoxes";
 import HomeProperties from "@/components/HomeProperties";
+import FeaturedProperties from "@/components/FeaturedProperties";
 
 // a next link uses href property, not "to" like react router.  You can do this two ways
 // Link href="/properties?query=param" as plain text, allowing query params as well, or
@@ -14,6 +15,7 @@ const HomePage = () => {
     <div>
       <Hero />
       <InfoBoxes />
+      <FeaturedProperties />
       <HomeProperties />
     </div>
   );
