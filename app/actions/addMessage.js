@@ -4,8 +4,6 @@ import connectDB from "@/config/database";
 import Message from "@/models/Message";
 import { getSessionUser } from "@/utils/getSessionUser";
 
-import { redirect } from "next/navigation";
-
 // when using useActionState, it passes this previousState variable as well, before the formData
 // so you might use something like useActionState instead for actions that involve modifying global state or something like that
 // we wont use the previousState param for this.  this probably isnt the right use case for useActionState, but learning is learning
