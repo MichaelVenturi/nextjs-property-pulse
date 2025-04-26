@@ -5,7 +5,7 @@ import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
 import pin from "@/assets/images/pin.svg";
-import Spinner from "./Spinner";
+import Spinner from "../layout/Spinner";
 
 const PropertyMap = ({ property }) => {
   const [lat, setLat] = useState(null);

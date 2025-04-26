@@ -1,4 +1,4 @@
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCard from "@/components/property/PropertyCard";
 import Link from "next/link";
 import connectDB from "@/config/database";
 import Property from "@/models/Property";

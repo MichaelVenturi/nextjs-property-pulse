@@ -1,4 +1,4 @@
-import PropertyEditForm from "@/components/PropertyEditForm";
+import PropertyEditForm from "@/components/property/PropertyEditForm";
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import { convertToSerializableObject } from "@/utils/convertToObject";

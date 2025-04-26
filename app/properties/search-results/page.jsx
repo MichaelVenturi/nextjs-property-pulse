@@ -1,8 +1,8 @@
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import Link from "next/link";
-import PropertyCard from "@/components/PropertyCard";
-import PropertySearchForm from "@/components/PropertySearchForm";
+import PropertyCard from "@/components/property/PropertyCard";
+import PropertySearchForm from "@/components/property/PropertySearchForm";
 import { convertToSerializableObject } from "@/utils/convertToObject";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 

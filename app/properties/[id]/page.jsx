@@ -9,10 +9,10 @@ import connectDB from "@/config/database";
 import Property from "@/models/Property";
 
 // components
-import PropertyHeaderImage from "@/components/PropertyHeaderImage";
-import PropertyDetails from "@/components/PropertyDetails";
-import PropertyImages from "@/components/PropertyImages";
-import PropertyContactForm from "@/components/PropertyContactForm";
+import PropertyHeaderImage from "@/components/property/PropertyHeaderImage";
+import PropertyDetails from "@/components/property/PropertyDetails";
+import PropertyImages from "@/components/property/PropertyImages";
+import PropertyContactForm from "@/components/property/PropertyContactForm";
 import BookmarkButton from "@/components/BookmarkButton";
 import ShareButtons from "@/components/ShareButtons";
 

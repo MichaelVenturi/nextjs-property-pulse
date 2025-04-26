@@ -3,7 +3,7 @@ import { useEffect, useActionState } from "react";
 import { useSession } from "next-auth/react";
 import { toast } from "react-toastify";
 import addMessage from "@/app/actions/addMessage";
-import SubmitMessageButton from "./SubmitMessageButton";
+import SubmitMessageButton from "../SubmitMessageButton";
 
 const PropertyContactForm = ({ property }) => {
   const { data: session } = useSession();

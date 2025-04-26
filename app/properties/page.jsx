@@ -1,4 +1,4 @@
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCard from "@/components/property/PropertyCard";
 // here is where Nextjs shines:  no need for a separate backend with routes and handlers, and then having to do a useEffect in the component to hit those routes
 import connectDB from "@/config/database"; // we can just import our connectDB function and the models we want to work with and use them directly in our server component
 import Property from "@/models/Property"; // this is great, because personally I hate useEffect
